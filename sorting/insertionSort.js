@@ -15,5 +15,7 @@ const insertionSort = (arr, n = arr.length)=>{
     return arr;
 }
 
-const arr = [8, 9,1, 5, 2, 3]
+let  arr = [8, 9,1, 5, 2, 3]
+console.log("sorted array: ", insertionSort(arr))
+arr = [4,0]
 console.log("sorted array: ", insertionSort(arr))
