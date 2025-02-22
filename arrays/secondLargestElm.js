@@ -31,3 +31,20 @@ const find2ndLargest_TwoPass = (arr) => {
 };
 
 console.log("second largest elm(two pass): ", find2ndLargest_TwoPass(arr));
+
+const findSecondLargest_Optimal = (arr) => {
+  let largestElm = arr[0];
+  let secondLargestElm = -Infinity;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largestElm) {
+      secondLargestElm = largestElm;
+      largestElm = arr[i];
+    } else if (arr[i] < largestElm && arr[i] > secondLargestElm) {
+      secondLargestElm = arr[i];
+    }
+  }
+
+  return secondLargestElm;
+};
+
+console.log("Second Largest (Optimal):", findSecondLargest_Optimal(arr));
